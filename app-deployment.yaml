@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: app-deployment
-          image: siddharthbhardwaj99/flask:latest
+          image: siddharthbhardwaj99/todo-flask:latest
           imagePullPolicy: "Always"
           ports:
             - containerPort: 8000
