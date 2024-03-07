@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
         - name: mongodb-deployment
-          image: siddharthbhardwaj99/mongo
+          image: siddharthbhardwaj99/mongodb
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 27017
           env:
