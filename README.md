@@ -20,4 +20,10 @@ helm repo add prometheus-community https://prometheus-community.github.io/helm-c
 helm repo update <br>
 helm install prometheus prometheus-community/prometheus <br>
 above commands created prometheus pods/services with alertmanager using helm charts <br>
-expose prometheus server using prometheus-service.yaml
+kubectl expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-ext <br>
+gcloud compute firewall-rules create test-node-port \
+    --allow tcp:32166 <br>
+
+access prometheus dashboard at <node_IP>:<node_port> <br>
+
+count(kube_pod_deletion_timestamp) by (namespace, pod) > 0 <br>
