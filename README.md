@@ -14,3 +14,10 @@ created mongo persistent volume <br>
 created mongo persistent volume claim <br>
 created mongo deployment <br>
 created mongo service <br>
+added rolling update and probe configs in app-deployment.yaml <br>
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts <br>
+helm repo update <br>
+helm install prometheus prometheus-community/prometheus <br>
+above commands created prometheus pods/services with alertmanager using helm charts <br>
+expose prometheus server using prometheus-service.yaml
