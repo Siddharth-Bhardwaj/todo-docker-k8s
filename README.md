@@ -9,11 +9,12 @@ kubectl create -f app-deployment.yaml <br>
 created service yaml for app <br>
 kubectl create -f app-service.yaml <br>
 "kubectl get svc" to see services <br>
-"minikube service --url app-service" to get service URL <br>
 created mongo persistent volume <br>
 created mongo persistent volume claim <br>
 created mongo deployment <br>
 created mongo service <br>
+"minikube service --url app-service" to get service URL <br>
+"kubectl logs -f deployment/app-deployment" to live tail logs <br>
 added rolling update and probe configs in app-deployment.yaml <br>
 
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts <br>
