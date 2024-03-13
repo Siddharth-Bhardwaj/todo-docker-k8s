@@ -28,7 +28,7 @@ spec:
             - name: MONGO_HOST 
               value: "mongodb-service.default.svc.cluster.local"
             - name: MONGO_PORT
-              value: "37017"
+              value: "27017"
             - name: FLASK_ENV 
               value: development
             - name: PORT
@@ -37,17 +37,11 @@ spec:
             httpGet:
               path: /list
               port: 8000
-              httpHeaders:
-              - name: Custom-Header
-                value: Awesome
             initialDelaySeconds: 5
             periodSeconds: 5
           readinessProbe:
             httpGet:
               path: /list
               port: 8000
-              httpHeaders:
-              - name: Custom-Header
-                value: Awesome
             initialDelaySeconds: 5
             periodSeconds: 5
